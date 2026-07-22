@@ -1,0 +1,52 @@
+{
+  "name": "appdeploy",
+  "displayName": "AppDeploy",
+  "description": "Publish real web apps directly from VS Code",
+  "version": "0.0.1",
+  "publisher": "AppDeploy",
+  "private": true,
+  "icon": "icon.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AppDeploy-AI/vscode-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "ai",
+    "mcp",
+    "appdeploy",
+    "deploy",
+    "hosting",
+    "publish",
+    "vibe"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "appdeploy",
+        "label": "AppDeploy"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/vscode": "^1.101.0",
+    "typescript": "^5.8.2"
+  }
+}
